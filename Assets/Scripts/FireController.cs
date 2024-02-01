@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using Random = UnityEngine.Random;
 
 public class FireController : MonoBehaviour
@@ -25,7 +27,10 @@ public class FireController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.y > 7f)
+        {
+            SceneManager.LoadScene("Level1"); // reload the level
+        }
     }
 
     private void FixedUpdate()
@@ -35,7 +40,7 @@ public class FireController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GameManager.instance.score++;
+        GameManager.instance.score++; // increasing score.
         
         audioSource.Play();
         
