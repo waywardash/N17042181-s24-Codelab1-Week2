@@ -36,10 +36,15 @@ public class FireController : MonoBehaviour
     {
         
         audioSource.Play();
+        
+        ResetPosition();
     }
 
     private void ResetPosition()
     {
         float randomX = Random.Range(-7f, 7f); // just hard coding position for fire randomness.
+
+        transform.position = new Vector2(randomX, -7f);
+
     }
 }
