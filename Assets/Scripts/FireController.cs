@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -34,6 +35,7 @@ public class FireController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        GameManager.instance.score++;
         
         audioSource.Play();
         
