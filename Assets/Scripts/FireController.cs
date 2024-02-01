@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FireController : MonoBehaviour
 {
@@ -37,8 +38,8 @@ public class FireController : MonoBehaviour
         audioSource.Play();
     }
 
-    private void Reset()
+    private void ResetPosition()
     {
-        
+        float randomX = Random.Range(-7f, 7f); // just hard coding position for fire randomness.
     }
 }
